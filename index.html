@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - EARSHOT</title>
+  <style>
+    :root {
+      --bg: #0A0A0C;
+      --card: #141418;
+      --text: #FFFFFF;
+      --muted: #A1A1A6;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .last-updated {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+    p, li {
+      color: var(--muted);
+      font-size: 14.5px;
+      margin-bottom: 12px;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+    strong {
+      color: #FFFFFF;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 12px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">EARSHOT Privacy & Security</div>
+    <h1>Privacy Policy</h1>
+    <div class="last-updated">Last Updated: October 2026</div>
+
+    <p>
+      At <strong>EARSHOT</strong>, we believe privacy is a fundamental human right. Our music recognition extension is engineered from the ground up to respect your privacy with zero tracking, zero audio retention, and zero remote data harvesting.
+    </p>
+
+    <h2>1. Audio Data & Ephemeral Processing</h2>
+    <p>
+      EARSHOT only captures audio when you explicitly trigger identification (by clicking the "Identify" button or pressing the Spacebar).
+    </p>
+    <ul>
+      <li><strong>Temporary Memory Only:</strong> Captured tab audio snippets (approx. 4 seconds) exist exclusively in temporary browser memory (RAM) and are deleted immediately after fingerprint generation.</li>
+      <li><strong>No Server Recordings:</strong> Audio is converted into a mathematical acoustic fingerprint directly on your device using client-side WebAssembly. Raw audio recordings are never stored on disk or transmitted to our servers.</li>
+      <li><strong>Zero Microphone Access:</strong> EARSHOT does not access your microphone or ambient room audio. It only processes audio from the specific browser tab you are playing.</li>
+    </ul>
+
+    <h2>2. Song History & Local Storage</h2>
+    <p>
+      Your identified songs and user preferences are stored strictly inside your browser's local storage (<code>chrome.storage.local</code>) on your own device. We do not maintain any user accounts, databases, or remote tracking profiles. You can clear your entire history at any time with a single click.
+    </p>
+
+    <h2>3. Third-Party Services</h2>
+    <p>
+      To match acoustic fingerprints and retrieve song metadata (title, artist, album art, streaming links):
+    </p>
+    <ul>
+      <li><strong>Shazam Discovery API:</strong> The anonymous cryptographic signature is submitted to Shazam's public recognition endpoint solely to fetch song metadata.</li>
+      <li><strong>External Links:</strong> When clicking "Spotify" or "YouTube", you are redirected to third-party streaming services subject to their respective privacy policies.</li>
+    </ul>
+
+    <h2>4. Permissions Justification</h2>
+    <ul>
+      <li><code>tabCapture</code>: Used solely to capture a temporary 4-second audio snippet from the active browser tab upon user request.</li>
+      <li><code>activeTab</code>: Used to detect which tab is actively playing media so audio can be recognized.</li>
+      <li><code>storage</code>: Used to store identified song history and preferences locally on your computer.</li>
+      <li><code>offscreen</code>: Required by Manifest V3 to process and resample audio without interrupting playback to your speakers.</li>
+    </ul>
+
+    <h2>5. Contact & Questions</h2>
+    <p>
+      If you have any questions or feedback regarding this Privacy Policy, please open an issue on the official project repository or contact the developer.
+    </p>
+  </div>
+</body>
+</html>
